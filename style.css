@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: "metro";
+    src: url(fonts/metropolis-semi-bold.otf) format('opentype');
+}
+@font-face {
+    font-family: 'lemon';
+    src: url(fonts/LEMONMILK-Regular.otf) format('opentype');
+}
+@font-face {
+    font-family: 'lemonb';
+    src: url(fonts/LEMONMILK-Bold.otf) format('opentype');
+}
+
+:root{
+    --cor1: #FDF7F2;
+    --cor2: #31CC6F;
+    --cor3: #228C4C;
+    --cor4: #1F8045;
+    --cor5: #186637;
+    --cor6: #0F4023;
+
+    --font-social: "Bebas Neue", cursive;
+    --font-padrao: "metro", sens-serif;
+    --font-destaque: "lemon", sens-serif;
+    --font-destaqueb:"lemonb", sens-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+header{
+    background-color: #0F4023;
+    padding:0px 5px 5px 5px;
+    font-family: var(--font-padrao);
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    margin-left: 1%;
+    font-weight: normal;
+    font-size: 0.8em;
+}
+
+header a>img{
+    max-width: 15px;
+    max-height: 15px;
+    margin-right: 5px;
+}
+
+header a:hover{
+    color: var(--cor2);
+}
+
+nav{
+    margin: 30px 0px 0px 210px;
+}
+
+nav>a{
+    text-decoration: none;
+    color: #186637;
+    font-size: 1.2em;
+    font-family: var(--font-padrao);
+    padding: 10px;
+}
+
+nav>a:hover{
+    background-color: var(--cor5);
+    color: var(--cor1);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.logo{
+    padding: 0px;
+    margin: 0px;
+    margin-top: -50px;
+    margin-left: 35px;
+    display: flex;
+}
+
+main{
+    margin-top: 250px;
+    margin-left: 80px;
+    font-weight: 700;
+    
+}
+main>h1{
+    font-family: var(--font-destaque);
+    font-size: 2.5em;
+    color: var(--cor4);
+}
+h1>strong{
+    font-family: var(--font-destaqueb);
+    color: var(--cor2);
+}
+
+main>p{
+    font-size: 1.1em;
+    font-family: var(--font-padrao);
+    margin-top: 20px;
+    max-width: 480px;
+}
+
+main>article{
+    max-width: 230px;
+    
+    background-color: var(--cor2);
+    font-size: 1.2em;
+    padding: 12px;
+    border: var(--cor2) 2px solid;
+    margin-top:  10px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-family: var(--font-destaque);
+    margin-bottom: 45px;
+}
+
+article>a{
+    color: white;
+    text-decoration: none;
+}
+
+footer{
+    background-color: var(--cor5);
+    text-align: center;
+    color: white;
+    bottom: 0px;
+    padding-top: 0px;
+    position: relative;
+}
+
+footer>a{
+    text-decoration: none;
+    color: var(--cor2);
+}
+
+aside{
+    margin: 0px;
+    padding: 0px;
+}
+
+section.galeria{
+    margin: x auto;
+    width: 720px;
+    height: 615px;
+    position: relative;
+    overflow: hidden;
+}
+
+.foto{
+    position: absolute;
+    top: 29px;
+    right: 0px;
+    opacity: 0;
+    animation-name: animacao;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    max-width: 70%;
+    max-height: 617px;
+}
+
+@keyframes animacao{
+
+    25%{
+        opacity: 1;
+        
+    }
+
+    50%{
+        opacity: 0;
+    }
+}
+
+.foto:nth-child(1){
+    animation-delay: time;
+}
+
+.foto:nth-child(2){
+    animation-delay: 7.5s;
+}
+
+.foto:nth-child(3){
+    animation-delay: 12.5s;
+}
